@@ -10,5 +10,11 @@ print('Please select action')
 print('1) Attack')
 print('2) Heal')
 
+player_selection = input()
 
-
+if player_selection == '1':
+    print('Attack')
+elif player_selection == '2':
+    print('Heal player')
+else:
+    print('invalid Input')
