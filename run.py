@@ -23,6 +23,9 @@ while Game_In_Progress == True:
         print('Heal player')
     else:
         print('invalid Input')
+        
+    if Player['health'] <= 0:
+        Game_In_Progress = False
 
-        if Player['health'] <= 0:
-            Game_In_Progress = False
+
+        
