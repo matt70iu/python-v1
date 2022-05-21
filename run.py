@@ -13,7 +13,10 @@ print('2) Heal')
 player_selection = input()
 
 if player_selection == '1':
-    print('Attack')
+    opponent['health'] = opponent['health'] - player['attack'] 
+    print(opponent['health'])
+
+
 elif player_selection == '2':
     print('Heal player')
 else:
