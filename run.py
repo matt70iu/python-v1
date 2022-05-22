@@ -19,6 +19,7 @@ while GAME_IN_PROGRESS is True:
         print('Please select action')
         print('1) Attack')
         print('2) Heal')
+        print('3) Exit Game')
 
         player_selection = input()
 
@@ -35,6 +36,9 @@ while GAME_IN_PROGRESS is True:
             print(player['health'])
         elif player_selection == '2':
             print('Heal player')
+        elif player_selection == '3':
+            ANOTHER_ROUND = False
+            GAME_IN_PROGRESS = False
         else:
             print('invalid Input')
 
