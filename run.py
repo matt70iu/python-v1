@@ -8,31 +8,34 @@ opponent = {'name': 'Max', 'attack': 12, 'health': 100}
 GAME_IN_PROGRESS = True
 
 while GAME_IN_PROGRESS is True:
+    ANOTHER_ROUND = True
 
-    PLAYER_WON = False
-    OPPONENT_WON = False
+    while ANOTHER_ROUND is True:
 
-    print('Please select action')
-    print('1) Attack')
-    print('2) Heal')
+        PLAYER_WON = False
+        OPPONENT_WON = False
 
-    player_selection = input()
+        print('Please select action')
+        print('1) Attack')
+        print('2) Heal')
 
-    if player_selection == '1':
-        opponent['health'] = opponent['health'] - player['attack']
-        if opponent['health'] <= 0:
-            PLAYER_WON = True         
+        player_selection = input()
+
+        if player_selection == '1':
+            opponent['health'] = opponent['health'] - player['attack']
+            if opponent['health'] <= 0:
+                PLAYER_WON = True
+            else:
+                player['health'] = player['health'] - opponent['attack']
+                if player['health'] <= 0:
+                    OPPONENT_WON = True
+
+            print(opponent['health'])
+            print(player['health'])
+        elif player_selection == '2':
+            print('Heal player')
         else:
-            player['health'] = player['health'] - opponent['attack']
-            if player['health'] <= 0:
-                OPPONENT_WON = True              
+            print('invalid Input')
 
-        print(opponent['health'])
-        print(player['health'])
-    elif player_selection == '2':
-        print('Heal player')
-    else:
-        print('invalid Input')
-
-    if PLAYER_WON is True or OPPONENT_WON is True:
-        GAME_IN_PROGRESS = False
+        if PLAYER_WON is True or OPPONENT_WON is True:
+            ANOTHER_ROUND = False
