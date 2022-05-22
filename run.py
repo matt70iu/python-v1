@@ -3,12 +3,13 @@ PLAYER_ATTACK = 10
 PLAYER_HEAL = 16
 HEALTH = 100
 
-player = {'name': 'Matt', 'attack': 10, 'heal': 16, 'health': 100}
-opponent = {'name': 'Max', 'attack': 12, 'health': 100}
+
 GAME_IN_PROGRESS = True
 
 while GAME_IN_PROGRESS is True:
     ANOTHER_ROUND = True
+    player = {'name': 'Matt', 'attack': 10, 'heal': 16, 'health': 100}
+    opponent = {'name': 'Max', 'attack': 12, 'health': 100}
 
     while ANOTHER_ROUND is True:
 
