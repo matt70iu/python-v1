@@ -17,12 +17,18 @@ while GAME_IN_PROGRESS is True:
 
     if player_selection == '1':
         opponent['health'] = opponent['health'] - player['attack']
-        player['health'] = player['health'] - opponent['attack']
+        if opponent['health'] <= 0:
+            pass
+        else:
+            player['health'] = player['health'] - opponent['attack']
+            if player['health'] <= 0:
+                pass
+
         print(opponent['health'])
         print(player['health'])
     elif player_selection == '2':
         print('Heal player')
     else:
         print('invalid Input')
-    if player['health'] <= 0:
+    if player['health'] <= 0 or opponent['health'] <= 0:
         GAME_IN_PROGRESS = False
