@@ -9,6 +9,9 @@ GAME_IN_PROGRESS = True
 
 while GAME_IN_PROGRESS is True:
 
+    PLAYER_WON = False
+    OPPONENT_WON = False
+
     print('Please select action')
     print('1) Attack')
     print('2) Heal')
@@ -18,11 +21,11 @@ while GAME_IN_PROGRESS is True:
     if player_selection == '1':
         opponent['health'] = opponent['health'] - player['attack']
         if opponent['health'] <= 0:
-            pass
+            PLAYER_WON = True         
         else:
             player['health'] = player['health'] - opponent['attack']
             if player['health'] <= 0:
-                pass
+                OPPONENT_WON = True              
 
         print(opponent['health'])
         print(player['health'])
@@ -30,5 +33,6 @@ while GAME_IN_PROGRESS is True:
         print('Heal player')
     else:
         print('invalid Input')
-    if player['health'] <= 0 or opponent['health'] <= 0:
+
+    if PLAYER_WON is True or OPPONENT_WON is True:
         GAME_IN_PROGRESS = False
