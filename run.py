@@ -7,7 +7,7 @@ player = {'name': 'Matt', 'attack': 10, 'heal': 16, 'health': 100}
 opponent = {'name': 'Max', 'attack': 12, 'health': 100}
 GAME_IN_PROGRESS = True
 
-while GAME_IN_PROGRESS == True:
+while GAME_IN_PROGRESS is True:
 
     print('Please select action')
     print('1) Attack')
@@ -20,9 +20,9 @@ while GAME_IN_PROGRESS == True:
         player['health'] = player['health'] - opponent['attack']
         print(opponent['health'])
         print(player['health'])
-
-
     elif player_selection == '2':
         print('Heal player')
     else:
         print('invalid Input')
+    if player['health'] <= 0:
+        GAME_IN_PROGRESS = False
