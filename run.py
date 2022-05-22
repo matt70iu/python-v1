@@ -1,31 +1,23 @@
-Player_Name = 'Matt'
-Player_Attack = 10
-Player_Health = 16
-Health = 100
+PLAYER_NAME = 'Matt'
+PLAYER_ATTACK = 10
+PLAYER_HEAL = 16
+HEALTH = 100
 
-Player = {'name': 'Matt', 'attack': 10, 'heal': 16, 'health': 100}
-Opponent = {'name': 'Max', 'attack': 12, 'health': 100}
-Game_In_Progress = True
+player = {'name': 'Matt', 'attack': 10, 'heal': 16, 'health': 100}
+opponent = {'name': 'Max', 'attack': 12, 'health': 100}
 
-while Game_In_Progress == True:
+print('Please select action')
+print('1) Attack')
+print('2) Heal')
 
-    print('Please select action')
-    print('1) Attack')
-    print('2) Heal')
+player_selection = input()
 
-    Player_Selection = input()
-    if Player_Selection == '1':
-        Opponent['health'] = Opponent['health'] - Player['attack']
-        Player['health'] = Player['health'] - Opponent['attack']
-        print(Opponent['health'])
-        print(Player['health'])
-    elif Player_Selection == '2':
-        print('Heal player')
-    else:
-        print('invalid Input')
-        
-    if Player['health'] <= 0:
-        Game_In_Progress = False
+if player_selection == '1':
+    opponent['health'] = opponent['health'] - player['attack']
+    print(opponent['health'])
 
 
-        
+elif player_selection == '2':
+    print('Heal player')
+else:
+    print('invalid Input')
