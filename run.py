@@ -15,10 +15,11 @@ while GAME_IN_PROGRESS is True:
     print('Enter player name')
     player['name'] = input()
 
+    print('--- ' * 8)
     print(player['name'] + ' has ' + str(player['health']) + ' health')
+    print(opponent['name'] + ' has ' + str(opponent['health']) + ' health')
 
     while ANOTHER_ROUND is True:
-
         PLAYER_WON = False
         OPPONENT_WON = False
 
