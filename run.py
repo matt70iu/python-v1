@@ -11,6 +11,7 @@ while GAME_IN_PROGRESS is True:
     player = {'name': 'Matt', 'attack': 10, 'heal': 16, 'health': 100}
     opponent = {'name': 'Max', 'attack': 12, 'health': 100}
 
+    print('--- ' * 8)
     print('Enter player name')
     player['name'] = input()
 
@@ -19,6 +20,7 @@ while GAME_IN_PROGRESS is True:
         PLAYER_WON = False
         OPPONENT_WON = False
 
+        print('--- ' * 8)
         print('Please select action')
         print('1) Attack')
         print('2) Heal')
