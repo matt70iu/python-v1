@@ -54,6 +54,8 @@ while GAME_IN_PROGRESS is True:
 
         elif PLAYER_WON:
             print(player['name'] + ' won')
+            ANOTHER_ROUND = False
 
-        if PLAYER_WON is True or OPPONENT_WON is True:
+        elif OPPONENT_WON:
+            print(player['name'] + ' won')
             ANOTHER_ROUND = False
