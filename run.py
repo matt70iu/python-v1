@@ -41,7 +41,12 @@ while GAME_IN_PROGRESS is True:
                     OPPONENT_WON = True
 
         elif player_selection == '2':
-            print('Heal player')
+            player['health'] = player['health'] + player['heal']
+
+            player['health'] = player['health'] - opponent['attack']
+            if player['health'] <= 0:
+                OPPONENT_WON = True
+
         elif player_selection == '3':
             ANOTHER_ROUND = False
             GAME_IN_PROGRESS = False
@@ -49,13 +54,14 @@ while GAME_IN_PROGRESS is True:
             print('invalid Input')
 
         if PLAYER_WON is False and OPPONENT_WON is False:
-            print(player['name'] + ' has ' + player['health'] + ' left')
-            print(opponent['name'] + ' has ' + opponent['health'] + ' left')
+            print(player['name'] + ' has ' + str(player['health']) + ' left')
+            print(opponent['name'] + ' has ' + str(
+                opponent['health']) + ' left')
 
         elif PLAYER_WON:
             print(player['name'] + ' won')
             ANOTHER_ROUND = False
 
         elif OPPONENT_WON:
-            print(player['name'] + ' won')
+            print('Your Opponent wins!')
             ANOTHER_ROUND = False
