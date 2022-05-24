@@ -1,15 +1,12 @@
-PLAYER_NAME = 'Matt'
-PLAYER_ATTACK = 10
-PLAYER_HEAL = 16
-HEALTH = 100
-
+from random import randint
 
 GAME_IN_PROGRESS = True
 
 while GAME_IN_PROGRESS is True:
     ANOTHER_ROUND = True
     player = {'name': 'Matt', 'attack': 10, 'heal': 16, 'health': 100}
-    opponent = {'name': 'Max', 'attack': 12, 'health': 100}
+    opponent = {'name': 'Max', 'attack_min': 10,
+                'attack_max': 20, 'health': 100}
 
     print('--- ' * 8)
     print('Enter player name')
@@ -36,7 +33,9 @@ while GAME_IN_PROGRESS is True:
             if opponent['health'] <= 0:
                 PLAYER_WON = True
             else:
-                player['health'] = player['health'] - opponent['attack']
+                opponent_attack = randint(opponent['attack_min'],
+                                          opponent['attack_max'])
+                player['health'] = player['health'] - opponent_attack
                 if player['health'] <= 0:
                     OPPONENT_WON = True
 
