@@ -2,6 +2,12 @@ from random import randint
 
 GAME_IN_PROGRESS = True
 
+
+def opponent_attack_func():
+    return randint(opponent['attack_min'],
+                   opponent['attack_max'])
+
+
 while GAME_IN_PROGRESS is True:
     ANOTHER_ROUND = True
     player = {'name': 'Matt', 'attack': 10, 'heal': 16, 'health': 100}
@@ -33,16 +39,16 @@ while GAME_IN_PROGRESS is True:
             if opponent['health'] <= 0:
                 PLAYER_WON = True
             else:
-                opponent_attack = randint(opponent['attack_min'],
-                                          opponent['attack_max'])
-                player['health'] = player['health'] - opponent_attack
+                player['health'] = player['health'] - opponent_attack_func()
                 if player['health'] <= 0:
                     OPPONENT_WON = True
 
         elif player_selection == '2':
             player['health'] = player['health'] + player['heal']
 
-            player['health'] = player['health'] - opponent['attack']
+            opponent_attack = randint(opponent['attack_min'],
+                                      opponent['attack_max'])
+            player['health'] = player['health'] - opponent_attack
             if player['health'] <= 0:
                 OPPONENT_WON = True
 
