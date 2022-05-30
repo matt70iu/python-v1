@@ -12,6 +12,7 @@ def end_of_game(winner_name):
 
 
 while GAME_IN_PROGRESS is True:
+    COUNTER = 0
     ANOTHER_ROUND = True
     player = {'name': 'Matt', 'attack': 10, 'heal': 16, 'health': 100}
     opponent = {'name': 'Max', 'attack_min': 10,
@@ -26,6 +27,8 @@ while GAME_IN_PROGRESS is True:
     print(opponent['name'] + ' has ' + str(opponent['health']) + ' health')
 
     while ANOTHER_ROUND is True:
+
+        COUNTER = COUNTER + 1
         PLAYER_WON = False
         OPPONENT_WON = False
 
@@ -65,12 +68,14 @@ while GAME_IN_PROGRESS is True:
 
         elif PLAYER_WON:
             end_of_game(player['name'])
-            game_result = {'name': player['name'], 'health': player['health']}
+            game_result = {'name': player['name'], 'health': player['health'],
+                           'no of rounds': COUNTER}
             print(game_result)
             ANOTHER_ROUND = False
 
         elif OPPONENT_WON:
             end_of_game(opponent['name'])
-            game_result = {'name': player['name'], 'health': player['health']}
+            game_result = {'name': player['name'], 'health': player['health'],
+                           'no of rounds': COUNTER}
             print(game_result)
             ANOTHER_ROUND = False
