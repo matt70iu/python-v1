@@ -7,8 +7,8 @@ def opponent_attack_func():
                    opponent['attack_max'])
 
 
-def end_of_game():
-    print('The Player Won')
+def end_of_game(winner_name):
+    print(winner_name)
 
 
 while GAME_IN_PROGRESS is True:
@@ -64,9 +64,9 @@ while GAME_IN_PROGRESS is True:
                 opponent['health']) + ' left')
 
         elif PLAYER_WON:
-            end_of_game()
+            end_of_game(player['name'])
             ANOTHER_ROUND = False
 
         elif OPPONENT_WON:
-            end_of_game()
+            end_of_game(opponent['name'])
             ANOTHER_ROUND = False
