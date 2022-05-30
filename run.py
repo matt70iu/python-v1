@@ -8,7 +8,7 @@ def opponent_attack_func():
 
 
 def end_of_game(winner_name):
-    print(winner_name)
+    print(f'{winner_name} won this time')
 
 
 while GAME_IN_PROGRESS is True:
