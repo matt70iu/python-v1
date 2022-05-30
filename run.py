@@ -1,5 +1,4 @@
 from random import randint
-
 GAME_IN_PROGRESS = True
 
 
@@ -45,10 +44,7 @@ while GAME_IN_PROGRESS is True:
 
         elif player_selection == '2':
             player['health'] = player['health'] + player['heal']
-
-            opponent_attack = randint(opponent['attack_min'],
-                                      opponent['attack_max'])
-            player['health'] = player['health'] - opponent_attack
+            player['health'] = player['health'] - opponent_attack_func()
             if player['health'] <= 0:
                 OPPONENT_WON = True
 
