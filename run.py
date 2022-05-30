@@ -38,6 +38,7 @@ while GAME_IN_PROGRESS is True:
         print('1) Attack')
         print('2) Heal')
         print('3) Exit Game')
+        print('4) Display Results')
 
         player_selection = input()
 
@@ -59,6 +60,8 @@ while GAME_IN_PROGRESS is True:
         elif player_selection == '3':
             ANOTHER_ROUND = False
             GAME_IN_PROGRESS = False
+        elif player_selection == '4':
+            print(GAME_RESULTS)
         else:
             print('invalid Input')
 
@@ -72,7 +75,6 @@ while GAME_IN_PROGRESS is True:
             game_result = {'name': player['name'], 'health': player['health'],
                            'no of rounds': COUNTER}
             GAME_RESULTS.append(game_result)
-            print(GAME_RESULTS)
             ANOTHER_ROUND = False
 
         elif OPPONENT_WON:
@@ -80,5 +82,4 @@ while GAME_IN_PROGRESS is True:
             game_result = {'name': player['name'], 'health': player['health'],
                            'no of rounds': COUNTER}
             GAME_RESULTS.append(game_result)
-            print(GAME_RESULTS)
             ANOTHER_ROUND = False
