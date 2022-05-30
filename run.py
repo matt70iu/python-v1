@@ -1,5 +1,6 @@
 from random import randint
 GAME_IN_PROGRESS = True
+GAME_RESULTS = []
 
 
 def opponent_attack_func():
@@ -70,12 +71,14 @@ while GAME_IN_PROGRESS is True:
             end_of_game(player['name'])
             game_result = {'name': player['name'], 'health': player['health'],
                            'no of rounds': COUNTER}
-            print(game_result)
+            GAME_RESULTS.append(game_result)
+            print(GAME_RESULTS)
             ANOTHER_ROUND = False
 
         elif OPPONENT_WON:
             end_of_game(opponent['name'])
             game_result = {'name': player['name'], 'health': player['health'],
                            'no of rounds': COUNTER}
-            print(game_result)
+            GAME_RESULTS.append(game_result)
+            print(GAME_RESULTS)
             ANOTHER_ROUND = False
