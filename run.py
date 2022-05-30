@@ -60,8 +60,11 @@ while GAME_IN_PROGRESS is True:
         elif player_selection == '3':
             ANOTHER_ROUND = False
             GAME_IN_PROGRESS = False
+
         elif player_selection == '4':
-            print(GAME_RESULTS)
+            for player_stats in GAME_RESULTS:
+                print(player_stats)
+
         else:
             print('invalid Input')
 
