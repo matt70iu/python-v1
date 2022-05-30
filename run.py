@@ -65,8 +65,12 @@ while GAME_IN_PROGRESS is True:
 
         elif PLAYER_WON:
             end_of_game(player['name'])
+            game_result = {'name': player['name'], 'health': player['health']}
+            print(game_result)
             ANOTHER_ROUND = False
 
         elif OPPONENT_WON:
             end_of_game(opponent['name'])
+            game_result = {'name': player['name'], 'health': player['health']}
+            print(game_result)
             ANOTHER_ROUND = False
