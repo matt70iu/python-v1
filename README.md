@@ -2,7 +2,7 @@
 
 [Live site can be found here](#)
 
-Mortal Typthon is a text based battle game written in Python. The basic idea of the game is for you, the player, to beat your AI opponent, by attacking or healing as needed. Which player wins is determined by which players health reaches 0 or below first. The game will continue to play in a loop until the player quits.
+Mortal Typthon is a text based battle game written in Python. The basic idea of the game is for you, the player, to beat your AI opponent (called Max), by attacking or healing as needed. Which player wins or looses is determined by which players health reaches 0 or below first. The game will continue to play in a loop until the player quits.
 
 ## Features
 On starting the game, the player is greeted with a welcome message, as well as a prompt to enter their name as illustrated below:
@@ -35,51 +35,23 @@ This option speaks for itself and will exit the player out of the game completel
 
 ![Exit-Screen](screenshots/exit-screen-shot.png)
 
+4) Display results:
+This displays previous game results in the current seission by displaying player name, player health when finishing and the number of rounds taken to finish, as demonstrated below:
+
+![Display-Results](screenshots/display-results-screen-shot.png)
 
 ### Technologies Used:
-- HTML5
+- Python
 
- - CSS3
+- Gitpod and Microsoft Visual Studio Code (to build project)
 
- - Javascript
-
- - Font awsome font library
-
- - Google fonts
+- Horku and Github (for deployment)
 
 ### Existing Features
 
- - Task Counter
- This is set to remain at zero while the task list is empty and increase relevent to the amount of tasks on the list at any given time as illustrated below.
+- Round counter: When the player selects the option to display results, they are also presented with the 'no of rounds' that it took for the player to complete the game, weather they win or loose, as illustrated below:
 
- ![task-counter](assets/images/screenshots/task-counter.png)
-
-  ![task-counter-increase](assets/images/screenshots/counter-increase.png)
-
- 
-
-- __Home page__
-
- - The main list area contains a title, task counterm input field to add to type your tasks and a highlighted red button to add tasks to the list.
-
-  - At the bottom of the main home page, there is a link to a set of instructions, as well as social media icon links to facebook, twitter and instagram. These are illustrated below.
-
-
-  ![instructions-link-social](assets/images/screenshots/instructions-link-social.png)
-
-
- - As the user adds a task, a trash min icon appears beside that task to enable the user to later remove that task once it has been completed, as illustrated below.
-    
- ![trash-can-delete](assets/images/screenshots/trash-can-delete.png)
-
- - __Instructions page__
-
- - This is to give the user a simple and basic set on instructions on how to use the app.
-
- - There are also suggestions as to possible uses for the app as well as a link back to the main page and facebook, twitter and instagram social media icons. These are also illustrated below.
-
-  ![Instructions-main](assets/images/screenshots/instructions-main.png)
-
+![No-of-rounds](screenshots/no-of-rounds-scren-shot.png)
 
 
  ### Features Left to Implement
@@ -91,47 +63,37 @@ This option speaks for itself and will exit the player out of the game completel
 
 ## Testing
 
-- Main input field and add button kept popping out of the container on smaller screen sizes. Changed CSS property on input field to 100% of container size to rectify issue.
-- Errors in html validator after making social icons live caused by open tags. Rectified tags as needed.
-- Tested app live on Samsung Galaxy S22 and found instructions were not fully visbale on smaller screens as they would not scroll. Amended html markup to rectify.
-- Social icons and links too close to margins on smaller screens, inserted media quueries to compensate.
-- Removed redundent variables cuasing warning in jshint, updated js with es6 code to prevent es6 related errors using const.
-- Portrait on medium to small screens hding the input field and could not be accessed. Added scroll to Y axis and allowed input field to move as items added to list to compensate.
-- Favicon not displaying unless files are in root directory. Chose to have favicon and leave files in root directory.
+- I have run the game through gitpod, visual studio code and horuku with no errors.
+- Gitpod was showing problems due to missing docstrings in code, which I have no rectified.
+- I have played through multiple rounds of the game and it contines to loop without error, however, the game logic does seem a bit bias towards the player, giving them an advantage.
+- This could perhaps be rectified by changing the random numbers range within the dictionary for player, opponent or both.
+- Decorative strings seperating different portions of the game do not match up to the relevent text, so will rectify this before final deployment.
 
 
 ### Validator Testing
+- All code passed through PEP8 validator with no issues as per below:
 
-- HTML
-- No errors displayed when code was run through HTML Validator ![html validator](assets/images/screenshots/html-%20validator.png)
-
-https://validator.w3.org/
-
-- CSS
-
-- No errors displayed when code was run through CSS Validator  ![CSS Validator](assets/images/screenshots/css-validator.png)
-
-https://jigsaw.w3.org/css-validator/
-
-- Js
-
-- No errors displayed when code was run through Js Validator
-![js Validator](assets/images/screenshots/js-validator-screenshot.png)
-
-https://jshint.com/
+![Pep-Validator](screenshots/pep-8-validation-screen-shot.png)
 
 
 ## Deployment
 
+Setting up a new repository on Github:
+1. Log into Github.
+2. In my case, I wanted to build the repository using the one of code institute's templates.
+3. Within the relevent repository I selected "use this template".
+4. Git hub then created the new repository, which could later be linked into Heroku for deployment.
 
-The site was deployed to GitHub pages. The steps to deploy are as follows:
 
-1. Login to github and select the correct repository.
-2. Select the settings tab at the top the the repository.
-3. On the side bar, under the 'code and automation' heading, select 'pages'.
-4. Under the source heading, click the 'none' dropdown and select 'masterbranch'.
-5. Once done, the page will automaticallty refresh.
-6. Site is now live under https://matt70iu.github.io/JavaScript-milestone-V1/ in github pages.
+The app was deployed to Heroku via Github. The steps to deploy are as follows:
+
+1. Log into Horku and select "new" and then select "Create new app".
+2. Select an app name and region and select "create app".
+3. Select your newly created app from your dashboard and click the settings tab.
+4. Add any config Vars or build packs needed for app, in this case, PORT 8000 config vars and Python and nodejs for  build packs, remembering to ensure Python is your first build pack.
+5. Click the "Deploy" tab and under "Deployment Method" select "Github Pages".
+6. Log into Github and select correct repository to connect to app.
+7. For convenience, I selected "Automatic Deploys" so the app is updated automatically after each push from Gitpod/Visual Studio code.
 
 Making a local clone:
 
@@ -150,45 +112,22 @@ Forking the repository:
 
 ## Credits
 
-- Youtube tutorials used to help build site:
+- Youtube tutorials used to help build app:
 
-https://www.youtube.com/watch?v=mC45hUE0dNs&t=2s
+https://www.youtube.com/watch?v=kDdTgxv2Vv0
 
-Channel Link:https://www.youtube.com/channel/UC_H7wrnwGU3g1xrLasMf6Gg (Samir Saini)
+Channel Link:https:https://www.youtube.com/c/Academind (Academind)
 
-- Helped drastically in terms of basic site template as well as putting js code theory into proctise as a real live example.
+- I really enjoyed building this project with the help of this totorial, as it showed a very real life example of how Python can be used and implemented. Going though basics such as variables, disctionaries, lists, functions, loops etc. Tis really helped solidify all the material form the Python essentials module, as well as being able to compare to other comparative programing languages.
 
------------------------------------------------------------------
+- Code institute Python essentials mocule.
 
-https://www.youtube.com/watch?v=-pRg_daFjfk&t=550s
+- This gave me the basic theory and exercises and helped me to understand logically, what each line of code was doing.
 
-Channel Link:https:https://www.youtube.com/channel/UCCcK9DoXcPYcUYU2aSR7zzQ (learn-webdev)
+- https://www.geeksforgeeks.org/
 
-- Found this very helpful and easy to follow. Helped me to understand targeting of elements better between html and js.
+- Found this site extremely using for issues such as correct incdentation (which I really struggled with) as well as writing proper comments and docstrings when coding.
 
------------------------------------------------------------------
-
-https://www.youtube.com/watch?v=MkESyVB4oUw&t=1264s
-
-Channel Link:https://www.youtube.com/channel/UCBBGM84ZOs7z5jpTQAaZ_Hg (Tyler Potts)
-
-- Slightly more feature rich example which gave me some great ideas in terms of possible future developement of site/app.
-
------------------------------------------------------------------
-
-https://www.youtube.com/watch?v=3T_Jy1CqH9k&t=284s
-
-Channel Link: https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw (kevin Powell)
-
-- Really helped in terms of styling and editing of backgound image(s).
-
------------------------------------------------------------------
-
-https://www.youtube.com/watch?v=IhmSidOJSeE&t=715s
-
- Channel Link: https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw (kevin Powell)
-
- ----------------------------------------------------------------
 
 
 
@@ -196,10 +135,7 @@ https://www.youtube.com/watch?v=IhmSidOJSeE&t=715s
 
 ### Content
 
-- All wording was written by the developer with the aim of creating a simple, useful to do list.
-- Social media icons contained in the footer were sourced from https://www.fontawsome.com.
-- Added favicon to site using https://favicon.io/ although could not use in final version.
-- Used https://cssgradient.io/ to get backgournd colours.
+- Basic game content idea was gotten from previously mentioned tutlrial, as well as the project 3 breif within the code institute LMS.
 
 ### Acknowledgements
 
