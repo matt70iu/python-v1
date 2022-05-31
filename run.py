@@ -1,14 +1,23 @@
+'''Imports a random intiger.
+   Returns ramdom intiger'''
+
 from random import randint
 GAME_IN_PROGRESS = True
 GAME_RESULTS = []
 
 
 def attack_func():
+    '''Allocates intiger for player/opponent attack
+    Returns random intiger between 10 and 20'''
+
     return randint(opponent['attack_min'],
                    opponent['attack_max'])
 
 
 def end_of_game(winner_name):
+    '''Allocates winner at end of game
+    Returns print statement with winner name'''
+
     print(f'{winner_name} won this time')
 
 
