@@ -1,6 +1,5 @@
 '''Imports a random intiger.
    Returns ramdom intiger'''
-
 from random import randint
 GAME_IN_PROGRESS = True
 GAME_RESULTS = []
@@ -9,7 +8,6 @@ GAME_RESULTS = []
 def attack_func():
     '''Allocates intiger for player/opponent attack
     Returns random intiger between 10 and 20'''
-
     return randint(opponent['attack_min'],
                    opponent['attack_max'])
 
@@ -17,7 +15,6 @@ def attack_func():
 def end_of_game(winner_name):
     '''Allocates winner at end of game
     Returns print statement with winner name'''
-
     print(f'{winner_name} won this time')
 
 
@@ -30,8 +27,8 @@ while GAME_IN_PROGRESS is True:
     opponent = {'name': 'Max', 'attack_min': 10,
                 'attack_max': 20, 'health': 100}
 
-    print('--- ' * 8)
-    print('Enter player name')
+    print('--- ' * 11)
+    print('Welcome to Mortal Typthon! Enter player name:')
     player['name'] = input()
 
     print('--- ' * 8)
