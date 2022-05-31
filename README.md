@@ -1,42 +1,40 @@
 # Mortal Typthon
 
-[Live site can be found here](https://git.heroku.com/python-milestone-v1.git)
+[Live site can be found here](#)
 
-Mortal Typthon is a text based battle game written in Python. On starting the application, the user is greeted with 
+Mortal Typthon is a text based battle game written in Python. The basic idea of the game is for you, the player, to beat your AI opponent, by attacking or healing as needed. Which player wins is determined by which players health reaches 0 or below first. The game will continue to play in a loop until the player quits.
 
-
-S20 portrait:
-
-![S20-portrait](assets/images/screenshots/S20-portrait.png)
-
-S20 Landscape
-
-![S-20-landscape](assets/images/screenshots/S20-landscape.png)
-
-Iphone portrait
-
-![iphone-portrait](assets/images/screenshots/ipad-portrait.png)
-
-Iphone landscape
-
-![iphone-landscape](assets/images/screenshots/iphone-landscape.png)
-
-Ipad portrait
-
-![ipad-portrait](assets/images/screenshots/ipad-portrait.png)
-
-Ipad landscape
-
-![ipad-landscape](assets/images/screenshots/Ipad-landscape.png)
+## Features
+On starting the game, the player is greeted with a welcome message, as well as a prompt to enter their name as illustrated below:
 
 
+Welcome Screen:
 
+![Welcome-Screen](screenshots/welcome-screen-shot.png)
 
-## Features 
-The main list area consists of a title, task counter, input field, add button, social media icons, as well as a link to a set of instructions for the app.
-The user can also navigate back to the main app page when viewing instructions.
+Once the user enters their name, the player and opponents health are shown, as well as the options of: 1 "attack", 2 "heal", 3 "exit game" and 4 "display results" as per illustration below:
 
-![main-list](assets/images/screenshots/main-list.png)
+Options Screen:
+
+![Options-Screen](screenshots/options-screen-shot.png)
+
+The player must then select options 1-4 by typing in the relevent number.
+
+1) Attack:
+This will decrease both player and opponent health by a random number between 10 and 20 as shown below:
+
+![Attack-Screen](screenshots/attack-screen-shot.png)
+
+2) Heal:
+This will increase the player's health by a maximum of 16, although, the opponent's attack may also lessen or even wipe out the amount of health the player is given when healing as per below:
+
+![Heal-Screen](screenshots/healing-screenshot.png)
+
+3) Exit Game:
+This option speaks for itself and will exit the player out of the game completely, while displaying current player and opponent health as per below:
+
+![Exit-Screen](screenshots/exit-screen-shot.png)
+
 
 ### Technologies Used:
 - HTML5
