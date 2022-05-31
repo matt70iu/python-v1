@@ -21,6 +21,7 @@ def end_of_game(winner_name):
     print(f'{winner_name} won this time')
 
 
+# Main game loop
 while GAME_IN_PROGRESS is True:
     COUNTER = 0
     ANOTHER_ROUND = True
@@ -37,6 +38,7 @@ while GAME_IN_PROGRESS is True:
     print(player['name'] + ' has ' + str(player['health']) + ' health')
     print(opponent['name'] + ' has ' + str(opponent['health']) + ' health')
 
+    # Recurring round loop
     while ANOTHER_ROUND is True:
 
         COUNTER = COUNTER + 1
