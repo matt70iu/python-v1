@@ -3,7 +3,7 @@ GAME_IN_PROGRESS = True
 GAME_RESULTS = []
 
 
-def opponent_attack_func():
+def attack_func():
     return randint(opponent['attack_min'],
                    opponent['attack_max'])
 
@@ -15,7 +15,8 @@ def end_of_game(winner_name):
 while GAME_IN_PROGRESS is True:
     COUNTER = 0
     ANOTHER_ROUND = True
-    player = {'name': 'Matt', 'attack': 10, 'heal': 16, 'health': 100}
+    player = {'name': 'Matt', 'attack_min': 10,
+              'attack_max': 20,  'heal': 16, 'health': 100}
     opponent = {'name': 'Max', 'attack_min': 10,
                 'attack_max': 20, 'health': 100}
 
@@ -43,17 +44,17 @@ while GAME_IN_PROGRESS is True:
         player_selection = input()
 
         if player_selection == '1':
-            opponent['health'] = opponent['health'] - player['attack']
+            opponent['health'] = opponent['health'] - attack_func()
             if opponent['health'] <= 0:
                 PLAYER_WON = True
             else:
-                player['health'] = player['health'] - opponent_attack_func()
+                player['health'] = player['health'] - attack_func()
                 if player['health'] <= 0:
                     OPPONENT_WON = True
 
         elif player_selection == '2':
             player['health'] = player['health'] + player['heal']
-            player['health'] = player['health'] - opponent_attack_func()
+            player['health'] = player['health'] - attack_func()
             if player['health'] <= 0:
                 OPPONENT_WON = True
 
