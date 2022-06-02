@@ -28,10 +28,10 @@ while GAME_IN_PROGRESS is True:
                 'attack_max': 20, 'health': 100}
 
     print('--- ' * 11)
-    print('Welcome to Mortal Typthon! Enter player name:')
+    print('Welcome to Mortal Typthon! For instructions, enter player name:')
     player['name'] = input()
 
-    print('--- ' * 8)
+    print('--- ' * 6)
     print(player['name'] + ' has ' + str(player['health']) + ' health')
     print(opponent['name'] + ' has ' + str(opponent['health']) + ' health')
 
@@ -42,7 +42,7 @@ while GAME_IN_PROGRESS is True:
         PLAYER_WON = False
         OPPONENT_WON = False
 
-        print('--- ' * 8)
+        print('--- ' * 6)
         print('Please select action')
         print('1) Attack')
         print('2) Heal')
