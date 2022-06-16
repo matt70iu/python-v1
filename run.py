@@ -28,7 +28,7 @@ while GAME_IN_PROGRESS is True:
                 'attack_max': 20, 'health': 100}
 
     print('--- ' * 11)
-    print('Welcome to Mortal Typthon! For instructions, enter player name:')
+    print('Welcome to Mortal Typthon! Please enter player name:')
     player['name'] = input()
 
     print('--- ' * 6)
