@@ -1,6 +1,8 @@
 # Mortal Typthon
 
-[Live site can be found here](#)
+[Link to Heroku to view live app(login required)](https://dashboard.heroku.com/apps/python-milestone-v1)
+
+[Link to Github Repository](https://dashboard.heroku.com/apps/python-milestone-v1)
 
 Mortal Typthon is a text based battle game written in Python. The basic idea of the game is for you, the player, to beat your AI opponent (called Max), by attacking or healing as needed. Which player wins or looses is determined by which players health reaches 0 or below first. The game will continue to play in a loop until the player quits.
 
