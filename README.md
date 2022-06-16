@@ -45,7 +45,7 @@ This displays previous game results in the current seission by displaying player
 
 - Gitpod and Microsoft Visual Studio Code (to build project)
 
-- Horku and Github (for deployment)
+- Heroku and Github (for deployment)
 
 ### Existing Features
 
