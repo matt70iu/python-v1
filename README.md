@@ -57,10 +57,10 @@ This displays previous game results in the current seission by displaying player
 
 
  ### Features Left to Implement
+ - Would like to add the ability to save game results, possibly through use of a save file that can be loaded when game is started.
+ - Would love to introduce a difficulty level system, which would give the player a slight advantage/disadvantage over the AI.
+ - Would love to add the ability to play against another human also, though would have to think about what form this could take.
 
- - Would like to add a number beside each list item which increases according to the number of items on the list, as well as the already included counter at the top of the list.
- - Would like to improve app layout on smaller screens in future to reduce the need for the user to scroll.
- - Favicon nto displaying properly on live site so had to remove for now as also causing console errors.
 
 
 ## Testing
